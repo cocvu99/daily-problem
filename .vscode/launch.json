@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Day51",
+            "request": "launch",
+            "mainClass": "Day51",
+            "projectName": "daily-problem_a9c34f19"
+        },
+        {
+            "type": "java",
+            "name": "Launch Day1",
+            "request": "launch",
+            "mainClass": "Day1",
+            "projectName": "daily-problem_a9c34f19"
+        },
+        {
             "name": "g++.exe - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
