@@ -1,17 +1,10 @@
-/**
- * @file day51.cpp
- * @author cocvu
- * @brief 
- * @version 0.1
- * @date 2022-01-19
- * 
- * @copyright Copyright (c) 2022
- * Khoi tao file - NOT DONE
- */
-
-#include <iostream>
+#include<iostream>
 using namespace std;
 
-int main(){
-    cout << "Hello Problem 51" << endl;
+int main() {
+    if (__cplusplus == 201703L) cout << "C++17\n";
+    else if (__cplusplus == 201402L) cout << "C++14\n";
+    else if (__cplusplus == 201103L) cout << "C++11\n";
+    else if (__cplusplus == 199711L) cout << "C++98\n";
+    else std::cout << "pre-standard C++\n";
 }
