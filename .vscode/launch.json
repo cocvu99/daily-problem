@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Day2",
+            "request": "launch",
+            "mainClass": "Day2",
+            "projectName": "daily-problem_a9c34f19"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
             "name": "Launch Day51",
             "request": "launch",
             "mainClass": "Day51",
