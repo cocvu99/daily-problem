@@ -29,6 +29,8 @@ public class Day2 {
     
         System.out.println("Method 1:");
         ArrayProduct1(myArr, number);
+        
+        System.out.println("");
 
         System.out.println("Method 2:");
         ArrayProduct2(myArr, number);
@@ -52,8 +54,38 @@ public class Day2 {
         }
     }
 
-    // Method 2:
-    static void ArrayProduct2(int arr[], int n){
+/**
+* Method 2:
+* explanation: giai thich
+*   {              1,         a[0],    a[0]*a[1],    a[0]*a[1]*a[2],  }
+*   { a[1]*a[2]*a[3],    a[2]*a[3],         a[3],                 1,  }
+     
+*/
+    static void ArrayProduct2(int arr2[], int n){
+        int[] arrayBelow = new int[n];
+        int[] arrayAbove = new int[n];
+        int[] arrayProduct = new int[n];
 
+        for (int i = 0; i < n; i++) {
+            arrayAbove[i] = 1;
+            arrayBelow[i] = 1;
+            arrayProduct[i] = 1;
+        }
+        
+        for (int i = 1; i < n; i++) {
+            arrayAbove[i] = arr2[i-1] * arrayAbove[i-1];
+        }
+
+        for (int i = n-2; i >-1; --i) {
+            arrayBelow[i] = arr2[i+1] * arrayBelow[i+1];
+        }
+
+        for (int i = 0; i < n; i++) {
+            arrayProduct[i] = arrayAbove[i] * arrayBelow[i];
+        }
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(arrayProduct[i] + " ");
+        }
     }
 }
